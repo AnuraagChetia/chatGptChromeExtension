@@ -1,10 +1,11 @@
 {
   "name": "KlimbB Bot",
   "description": "Chat with an AI Bot",
-  "version": "3.0",
+  "version": "1.0",
   "manifest_version": 3,
   "action": {
     "default_title": "KlimbB Bot",
+    "default_popup": "index.html",
     "default_icon": {
       "16": "logo192.png",
       "128": "logo192.png"
