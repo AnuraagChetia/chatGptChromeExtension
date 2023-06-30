@@ -1,0 +1,42 @@
+.main {
+  background-color: aliceblue;
+  max-height: 80vh;
+  margin: none;
+  overflow-y: auto;
+}
+.display {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  width: 80%;
+  margin: auto;
+  list-style: none;
+  padding: 20px 0;
+}
+.outgoing {
+  display: flex;
+  justify-content: end;
+  border: 1px solid gray;
+  border-radius: 20px;
+  margin: 2px 5px;
+  padding: 10px 20px;
+}
+.incoming {
+  display: flex;
+  border-radius: 20px;
+  background-color: #8abfee;
+  margin: 2px 5px;
+  padding: 10px 20px;
+}
+.bot {
+  font-weight: 700;
+  margin: 10px 0 0 0;
+  color: rgb(4, 23, 87);
+}
+.user {
+  display: flex;
+  justify-content: end;
+  font-weight: 700;
+  margin: 10px 0 0 0;
+}

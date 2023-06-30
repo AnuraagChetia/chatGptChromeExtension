@@ -1,0 +1,32 @@
+.form {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  font-size: 16px;
+  width: 300px;
+  outline: none;
+}
+.input:focus {
+  border-color: #0084ff;
+  box-shadow: 0 0 5px rgba(0, 132, 255, 0.5);
+}
+
+.button {
+  padding: 10px 20px;
+  background-color: #0084ff;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  outline: none;
+}
+.button:hover {
+  background-color: #0073e6;
+}

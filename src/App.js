@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React, { useEffect } from "react";
+import axios from "axios";
+import Chatbox from "./components/ui/ChatBox";
+import { useDispatch, useSelector } from "react-redux";
+import { messageActions } from "./store/messageReducer";
 function App() {
+  const dispatch = useDispatch();
+  // const state = useSelector((state) => state.messages);
+  useEffect(() => {
+    const get = async () => {
+      const res = await axios.get("http://localhost:3001/get-message");
+      // console.log(...res.data);
+      // res.data.forEach((element) => {
+      //   dispatch(messageActions.getMessage(element));
+      // });
+      dispatch(messageActions.getMessage(res.data));
+    };
+    get();
+  }, []);
+  // console.log(state);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Chatbox />
+    </>
   );
 }
 
