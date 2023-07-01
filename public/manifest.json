@@ -11,15 +11,11 @@
       "128": "logo192.png"
     }
   },
-  "permissions": ["tabs"],
-  "background": {
-    "service_worker": "background.js"
-  },
   "content_scripts": [
     {
-      "matches": ["<all_urls>"],
+      "matches": ["https://www.youtube.com/"],
       "js": ["inject.js"]
     }
   ],
-  "host_permissions": ["<all_urls>"]
+  "host_permissions": ["https://www.youtube.com/*"]
 }

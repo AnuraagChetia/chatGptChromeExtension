@@ -1,7 +1,23 @@
 .headDiv {
-  height: 4rem;
-  padding: 10px 20px;
+  height: fit-content;
+  position: fixed;
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
   font-size: xx-large;
   font-weight: bold;
+  color: #272727;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
   background-color: rgb(7, 118, 214);
 }
+/* .headDiv {
+  background-color: #f2f2f2;
+  color: #333333;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 10px;
+  text-align: center;
+  border-bottom: 2px solid #cccccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+} */

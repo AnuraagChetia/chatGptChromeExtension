@@ -1,7 +1,11 @@
 .form {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
+  /* margin-top: 20px; */
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #fff;
+  box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
 }
 
 .input {
@@ -29,4 +33,6 @@
 }
 .button:hover {
   background-color: #0073e6;
+  scale: 110%;
+  animation-duration:5s;
 }

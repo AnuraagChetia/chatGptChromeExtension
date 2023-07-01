@@ -8,16 +8,26 @@ function App() {
   // const state = useSelector((state) => state.messages);
   useEffect(() => {
     const get = async () => {
-      const res = await axios.get("http://localhost:3001/get-message");
-      // console.log(...res.data);
-      // res.data.forEach((element) => {
-      //   dispatch(messageActions.getMessage(element));
-      // });
-      dispatch(messageActions.getMessage(res.data));
+      axios
+        .get("http://localhost:3001/get-message")
+        .then((res) => {
+          console.log(res);
+          dispatch(messageActions.getMessage(res.data));
+        })
+        .catch((error) => {
+          dispatch(
+            messageActions.sendMessage({
+              message: "Error: Something went wrong. Please try again!",
+              type: "incoming",
+              id: "err",
+            })
+          );
+        });
     };
     get();
   }, []);
   // console.log(state);
+
   return (
     <>
       <Chatbox />

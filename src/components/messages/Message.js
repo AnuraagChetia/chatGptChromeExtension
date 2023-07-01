@@ -13,12 +13,10 @@ import { useSelector } from "react-redux";
 // ];
 const Message = () => {
   const state = useSelector((state) => state.messages.messages);
-  // useEffect(() => {
-  //   setMessages(state.messages);
-  // }, [state.messages]);
   return (
     <div className="main">
       <ul className="display">
+        {state.length === 0 && <span className="empty">Start messaging</span>}
         {state.map((msg) => (
           <div key={msg.id}>
             {msg.type === "incoming" && <span className="bot">KlimbB Bot</span>}

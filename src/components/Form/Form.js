@@ -14,11 +14,13 @@ const Form = () => {
         type: "outgoing",
         message: message,
       };
+      dispatch(messageActions.sendMessage(data));
+      messageRef.current.value = "";
       const res = await axios.post("http://localhost:3001/send-message", data);
-      if (res.statusText === "OK") {
-        //dispatch action in redux store
-        dispatch(messageActions.sendMessage(res.data));
-      }
+      // if (res.statusText === "OK") {
+      //   //dispatch action in redux store
+      //   dispatch(messageActions.sendMessage(res.data));
+      // }
       const botRes = await axios.post("http://localhost:3001/bot-message", res);
       setTimeout(() => {
         console.log(botRes);
@@ -26,9 +28,14 @@ const Form = () => {
           dispatch(messageActions.sendMessage(botRes.data));
         }
       }, 1000);
-      messageRef.current.value = "";
     } catch (error) {
-      console.log(error);
+      dispatch(
+        messageActions.sendMessage({
+          message: "Error: Something went wrong. Please try again!",
+          type: "incoming",
+          id: "err",
+        })
+      );
     }
   };
   return (
