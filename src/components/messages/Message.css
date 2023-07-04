@@ -1,41 +1,39 @@
-.main {
-  background-color: white;
-  height: 80vh;
-  margin: none;
-  padding-top: 50px;
-  overflow-y: auto;
-}
 .display {
   display: flex;
   flex-direction: column;
   list-style: none;
   padding: 0;
+  padding-bottom: 80px;
   width: 80%;
   margin: auto;
-  list-style: none;
-  padding: 20px 0;
 }
-.empty {
-  font-size: x-large;
-  text-align: center;
-  margin: 20rem 0;
-  font-style: italic;
+
+.msgDiv {
+  margin: 10px 0;
 }
+
 .outgoing {
   display: inline-flex;
   float: right;
-  background-color: #8abfee;
+  background-color: #f8ceec;
+  background-image: linear-gradient(315deg, #f8ceec 0%, #b39ce9 74%);
   border-radius: 20px;
   margin: 2px 5px;
   padding: 10px 20px;
+  max-width: 70%;
+  word-break: normal;
 }
-.incoming {
+.incoming,
+.new {
   display: flex;
   width: fit-content;
   border-radius: 20px;
-  background-color: whitesmoke;
+  background-color: #ffffff;
+  background-image: linear-gradient(315deg, #dceafa 0%, #7cafe9 74%);
   margin: 2px 5px;
+  max-width: 70%;
   padding: 10px 20px;
+  word-break: normal;
 }
 #err {
   color: red;
@@ -43,7 +41,7 @@
 }
 .bot {
   font-weight: 700;
-  margin: 10px 0 0 0;
+  padding: 20px 0;
   color: rgb(4, 23, 87);
 }
 .user {

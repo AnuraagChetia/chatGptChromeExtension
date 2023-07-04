@@ -5,11 +5,11 @@ import Message from "../messages/Message";
 import Form from "../Form/Form";
 const Chatbox = (props) => {
   return (
-    <>
+    <div className="chat">
       <Header />
       <Message />
       <Form />
-    </>
+    </div>
   );
 };
 

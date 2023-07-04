@@ -1,23 +1,19 @@
 .headDiv {
-  height: fit-content;
-  position: fixed;
+  border-bottom: 1px solid #e4e1e1;
   width: 100%;
-  padding: 10px 0;
-  text-align: center;
   font-size: xx-large;
+  font-style: italic;
   font-weight: bold;
   color: #272727;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-
-  background-color: rgb(7, 118, 214);
+  background-color: rgb(255, 255, 255);
 }
-/* .headDiv {
-  background-color: #f2f2f2;
-  color: #333333;
-  font-size: 24px;
-  font-weight: bold;
-  padding: 10px;
-  text-align: center;
-  border-bottom: 2px solid #cccccc;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-} */
+.content {
+  display: flex;
+  align-items: center;
+  margin-left: 5%;
+}
+.pfp {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+}

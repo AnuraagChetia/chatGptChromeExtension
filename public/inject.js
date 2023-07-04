@@ -20,8 +20,11 @@ const createButton = function () {
   injectElement.style.fontWeight = "700";
   injectElement.style.textAlign = "center";
   injectElement.style.color = "#fff";
-  injectElement.style.backgroundColor = "#3E495F";
+  // injectElement.style.backgroundColor = "#3E495F";
   injectElement.style.height = "34px";
+  // injectElement.style.backgroundColor = "rgb(238,174,202)";
+  injectElement.style.backgroundImage =
+    "linear-gradient(72.3deg, rgb(29, 7, 64) 8.5%, rgb(253, 105, 139) 92.2%)";
 
   // Add hover effect
   injectElement.addEventListener("mouseover", () => {
@@ -52,7 +55,7 @@ function createOverlay() {
   overlayElement.style.zIndex = "9999";
 
   overlayElement.innerHTML = `
-  <div id="chatBot" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); height:60rem; width:60rem">
+  <div id="chatBot" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); height:80rem; width:60rem">
     <iframe src="http://localhost:3000/" style="width: 100%; height: 100%; border: none;"></iframe>
   </div>
 `;

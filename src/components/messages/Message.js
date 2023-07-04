@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import "./Message.css";
+import Typewriter from "react-ts-typewriter";
 import { useSelector } from "react-redux";
 // const inbox = [
 //   { type: "outgoing", message: "Hey" },
@@ -13,21 +14,36 @@ import { useSelector } from "react-redux";
 // ];
 const Message = () => {
   const state = useSelector((state) => state.messages.messages);
+  // const typeRef = useRef();
+  // const containerElement = typeRef.current;
+  // const scrollToBottom = () => {
+  //   containerElement.scrollTop = containerElement.scrollHeight;
+  // };
+
   return (
-    <div className="main">
-      <ul className="display">
-        {state.length === 0 && <span className="empty">Start messaging</span>}
-        {state.map((msg) => (
-          <div key={msg.id}>
-            {msg.type === "incoming" && <span className="bot">KlimbB Bot</span>}
-            {msg.type === "outgoing" && <span className="user">You</span>}
-            <li id={msg.id} className={msg.type}>
-              {msg.message}
-            </li>
-          </div>
-        ))}
-      </ul>
-    </div>
+    <ul className="display">
+      {state.map((msg) => (
+        <div key={msg.id} className="msgDiv">
+          {(msg.type === "incoming" || msg.type === "new") && (
+            <span className="bot"> Klimbby</span>
+          )}
+          {msg.type === "outgoing" && <span className="user">You</span>}
+          <li id={msg.id} className={msg.type}>
+            {msg.type === "new" && (
+              // <Typed strings={[msg.message]} typeSpeed={10} />
+              <Typewriter
+                text={msg.message}
+                cursor={false}
+
+                // onFinished={scrollToBottom}
+              />
+            )}
+            {msg.type === "incoming" && msg.message}
+            {msg.type === "outgoing" && msg.message}
+          </li>
+        </div>
+      ))}
+    </ul>
   );
 };
 

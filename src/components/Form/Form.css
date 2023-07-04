@@ -1,11 +1,24 @@
+.container {
+  position: fixed;
+  width: 100%;
+  bottom: 0%;
+}
+
 .form {
   display: flex;
   justify-content: center;
-  /* margin-top: 20px; */
-  padding-top: 20px;
-  padding-bottom: 20px;
-  background-color: #fff;
-  box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+  padding: 20px 8%;
+  background-color: rgb(246, 244, 248);
+  /* -webkit-box-shadow: 0px -30px 70px -16px rgba(0, 0, 0, 0.56);
+  -moz-box-shadow: 0px -30px 70px -16px rgba(0, 0, 0, 0.56);
+  box-shadow: 0px -30px 70px -16px rgba(0, 0, 0, 0.56); */
+}
+
+.formItems {
+  /* border: 2px solid gray; */
+  display: flex;
+  border-radius: 20px;
+  background-color: white;
 }
 
 .input {
@@ -14,16 +27,17 @@
   border-radius: 20px;
   font-size: 16px;
   width: 300px;
+  border: none;
   outline: none;
 }
 .input:focus {
-  border-color: #0084ff;
-  box-shadow: 0 0 5px rgba(0, 132, 255, 0.5);
+  /* border-color: #0084ff; */
+  /* box-shadow: 0 0 5px rgba(0, 132, 255, 0.5); */
 }
 
 .button {
   padding: 10px 20px;
-  background-color: #0084ff;
+  /* background-color: #0084ff; */
   color: #fff;
   border: none;
   border-radius: 20px;
@@ -32,7 +46,12 @@
   outline: none;
 }
 .button:hover {
-  background-color: #0073e6;
-  scale: 110%;
-  animation-duration:5s;
+  background-color: #97f3ee;
+  scale: 105%;
+  animation-duration: 10s;
+}
+
+.sendBtn {
+  height: 20px;
+  width: 30px;
 }

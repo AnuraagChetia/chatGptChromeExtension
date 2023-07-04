@@ -1,7 +1,15 @@
 import React from "react";
 import "./Header.css";
+import pfp from "../../assets/pfp.avif";
 const Header = () => {
-  return <div className="headDiv">KlimbB AI bot</div>;
+  return (
+    <div className="headDiv">
+      <div className="content">
+        <img className="pfp" src={pfp}></img>
+        Klimbby
+      </div>
+    </div>
+  );
 };
 
 export default Header;
