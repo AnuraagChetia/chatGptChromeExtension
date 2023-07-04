@@ -25,7 +25,7 @@ const Message = () => {
       {state.map((msg) => (
         <div key={msg.id} className="msgDiv">
           {(msg.type === "incoming" || msg.type === "new") && (
-            <span className="bot"> Klimbby</span>
+            <span className="bot"> Grogu</span>
           )}
           {msg.type === "outgoing" && <span className="user">You</span>}
           <li id={msg.id} className={msg.type}>

@@ -1,7 +1,7 @@
 const createButton = function () {
   const injectElement = document.createElement("button");
   injectElement.className = "klimbb";
-  injectElement.innerHTML = "KlimbB";
+  injectElement.innerHTML = "Grogu";
   // Apply individual style properties to the button element
   injectElement.style.display = "inline-block";
   injectElement.style.outline = "none";
