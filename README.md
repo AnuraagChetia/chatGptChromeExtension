@@ -16,3 +16,4 @@
 
 ### Link to demo [https://drive.google.com/file/d/1goBnnJ9vtaL1WZiK2E9VWxYny2Uz6zSZ/view?usp=sharing](https://drive.google.com/file/d/1goBnnJ9vtaL1WZiK2E9VWxYny2Uz6zSZ/view?usp=sharing).
 
+Note: If you want to use a real AI then use openAi module and integrate it with your API key. I have no money so I used a dummy API :(
