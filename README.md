@@ -12,4 +12,7 @@
 
 ### Turn on developer mode and load unpack the build folder.
 
-## Use the extension :)
+### Use the extension :)
+
+### Link to demo [https://drive.google.com/file/d/1goBnnJ9vtaL1WZiK2E9VWxYny2Uz6zSZ/view?usp=sharing](https://drive.google.com/file/d/1goBnnJ9vtaL1WZiK2E9VWxYny2Uz6zSZ/view?usp=sharing).
+
